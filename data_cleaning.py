@@ -19,7 +19,7 @@ df['company_txt'] = df.apply(lambda x: x['Company Name'] if x['Rating'] <0 else 
 
 # state field
 df['job_state'] = df['Location'].apply(lambda x: x.split(',')[-1])
-df['job_state'] = df['job_state'].apply(lambda x: x.replace('California',' CA').replace('Illinois',' IL').replace('New York State',' NY').replace('New Jersey',' NJ').replace('Utah',' UT').replace('United States',' DC').replace('Remote',' RT'))
+df['job_state'] = df['job_state'].apply(lambda x: x.replace('California',' CA').replace('Illinois',' IL').replace('New York State',' NY').replace('New Jersey',' NJ').replace('Utah',' UT').replace('United States',' US').replace('Remote',' RT'))
 df['job_state'] = df['job_state'].apply(lambda x: x.replace(' ',''))
 # df.sql.value_counts()
 
